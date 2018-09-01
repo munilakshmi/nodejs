@@ -1,0 +1,119 @@
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    table.overflowTest{
+        padding: 15px;
+    width: 50%;
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    }
+</style>
+
+
+<body>
+    <div class="overflowTest">
+        <table>
+            <tr>
+                <td colspan='4'>
+                    <h4>GOVERNMENT OF INDIA</h4>
+                    <h4>DEPARTMENT OF SPACE</h4>
+                    <h4>NATIONAL ATMOSPHERIC RESEARCH LABORATORY</h4>
+					<h4>GADANKI-517112</h4>
+                </td>
+                <td>
+                    <h5>PHONE : 08585-272026,272024(GADANKI)</h5>
+                    <h5>FAX 08585-272018/21</h5>
+					<h5>E-mail :purchase@narl.gov.in</h5>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='4'>PURCHASE ORDER NO.<input type='text'/></td>
+                <td>Date :<input type='date'/></td>
+            </tr>
+            <tr>
+                <td colspan='5'>
+                    <!-- <p>
+                        <h5>M/s Sutron Hydromet Systems Pvt. Ltd., D-128-129,1
+                            <sup>st</susp> Floor ,Enterprise Okhla Industrial Area ,Phase -I New Delhi-110020
+                        </h5>
+                    </p>
+                    <p>Ph No:9856932589
+                        <br> Fax No :122220 55555
+                        <br> E-mail:test@gmail.com
+                    </p> -->
+                    <textarea rows="4" cols="80">
+                        </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='5'>Dear Sir,
+                    <p>ref :Your quotation No. <input type='text' /> dated :<input type='date'/> and e-mail dated :<input type='date'/>
+                    
+                    please arrange to supply the following at the rates offered by you vide your quotation No.<input type='text' /> 
+                    dated:<input type='date'/> and e-mail dated :<input type='date'/> in response to our Tender No <input type='text'/>,
+                    dated :<input type='date'/>, subject to the terms and conditions set out here under:
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>S.No</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Rate per Unit</th>
+                <th>Amount</th>
+            </tr>
+            <tr  ng-repeat="x in names track by $index | limitTo : 13">
+                <td>{{$index + 1}}</td>
+                <td>{{ x.description }}</td>
+                <td>{{ x.quantity }}</td>
+                <td>{{ x.rate }}</td>
+                <td>{{ x.amount }}</td>
+            </tr>
+
+            
+           
+            <tr>
+                <td colspan='4'><h4>Total Amount :</h4></td>
+                <td>{{total}}</td>
+            </tr>
+            <tr>
+                <td colspan='5'>TERMS AND CONDITIONS  as per annexure-I</td>
+            </tr>
+            <tr >
+                <td rowspan='2'>PURCHASE & STORE OFFICER,<br>
+                    <GADANKI-517112>NARL STORES,<br>GADANKI-517112,A.P,<br>
+                        PH:08585-27202
+                    </GADANKI-517112>
+                </td>
+                <td colspan='4'>Line item code:<input type='text'></td>
+            </tr>
+            <tr>
+                    <td colspan='5'>Indentor Name:<input type='text'></td>
+                   
+                </tr>
+                <tr>
+                        <td colspan='5'>Please acknowledge receipt of this P.O at the earliest.<br><br>Yours faithfully,
+			
+                                                                                 <br><br><br>(S NAMBI NARAYANAN)<br>
+						                                                                   PURCHASE & STORE OFFICER
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                            <td colspan='5'><p><input type='text'/> <input type='text'/> <input type='text'/> <input type='text'/> <input type='text'/></td>
+                           
+                        </tr>
+        </table>
+    </div>
+    <div><br>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <script rel="stylesheet" src="app/bootstrap.css"></script>
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="app/angular.js"></script>
+    <script src="app/ui_router.js"></script>
+    <script src="app/clientapp.js"></script>
+    <script src="app/modules/home/controllers/controller.js"></script>
+    <script src="app/modules/home/model/service.js"></script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    
+    <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+        <li><a ui-sref="list">Report</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</div>
+
+</body>
+</html>
